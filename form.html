@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap">
+    <title>form free request</title>
+</head>
+<body>
+    <style>
+        body {
+          font-family: 'Cairo', sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .form-container {
+          max-width: 700px;
+          width: 80%;
+          background-color: #ffffff;
+          border-radius: 20px;
+          padding: 20px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          text-align: right;
+          direction: rtl;
+          margin-top: 40px;
+        }
+      
+        h2 {
+          text-align: center;
+          color: #333;
+          margin-bottom: 15px;
+        }
+      
+        p.about {
+          margin-top: 20px;
+          font-size: 14px;
+          color: #555;
+          text-align: center;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+          color: #333;
+        }
+      
+        input[type="text"], input[type="email"], select, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 14px;
+          box-sizing: border-box;
+        }
+      
+        input[type="checkbox"] {
+          margin-right: 5px;
+        }
+      
+        textarea {
+          resize: vertical;
+          height: 100px;
+        }
+      
+        button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+      
+        button:hover {
+          background-color: #0056b3;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+        }
+        .banner img {
+            width: 103%;
+            border-radius:8px ;
+        }
+      </style>
+      
+      <div class="form-container">
+        <div class="banner">
+            <img src="/form-banner.png" alt="banner">
+        </div>
+        <br>
+        <form action="https://formspree.io/f/xldenkqz" method="POST">
+          <label for="name">الاسم الكامل:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">البريد الإلكتروني:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="social">حساب LinkedIn أو Twitter:</label>
+          <input type="text" id="social" name="social" required>
+      
+          <label for="designType">نوع التصميم المطلوب:</label>
+          <select id="designType" name="designType" required>
+            <option value="logo">شعار</option>
+            <option value="socialMedia">تصميم لوسائل التواصل الاجتماعي</option>
+            <option value="brandIdentity">هوية العلامة التجارية</option>
+          </select>
+      
+          <label for="terms">
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
+            أوافق على نشر رأيي حول التصميم على LinkedIn أو Twitter مع الإشارة إلى Navixel، وأقر بأن Navixel يملك الحق في استخدام هذا الرأي لأغراض التسويق ولا أملك الحق في بيع التصميم.
+          </label>
+      
+          <label for="additionalComments">تعليقات إضافية:</label>
+          <textarea id="additionalComments" name="additionalComments"></textarea>
+      
+          <button type="submit">إرسال</button>
+        </form>
+      
+        <p class="about">تعمل Navixel على تقديم أفضل حلول التصميم المبتكرة لخدمة الشركات والأفراد وتطوير هوية فريدة وعصرية.</p>
+      </div>
+      
+      
+</body>
+</html>
