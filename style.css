@@ -1,5 +1,5 @@
 /* Google Fonts Link */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   padding: 0;
@@ -19,12 +19,12 @@ nav {
   width: 100%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
-.logo img{
+
+.logo img {
   width: 40px;
-  margin-left:40px;
+  margin-left: 40px;
   margin-top: 5px;
 }
-
 
 nav ul {
   float: right;
@@ -47,19 +47,10 @@ nav ul li a {
 a.active,
 a:hover {
   background: #1b9bff;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.checkbtn {
-  font-size: 22px;
-  color: rgb(0, 0, 0);
-  float: right;
-  line-height: 80px;
-  margin-right: 30px;
-  cursor: pointer;
-  display: none;
-}
-
+.checkbtn,
 .checkbtn-close {
   font-size: 22px;
   color: rgb(0, 0, 0);
@@ -69,9 +60,11 @@ a:hover {
   cursor: pointer;
   display: none;
 }
-.contact-us{
+
+.contact-us {
   display: none;
 }
+
 #check {
   display: none;
 }
@@ -85,62 +78,59 @@ a:hover {
     font-size: 16px;
   }
 }
-.contact-us{
+
+.contact-us {
   margin-top: 10px;
 }
 
-hr{
- display: none;
+hr {
+  display: none;
 }
 
-/* Responsive media query code for small screen */
+/* Responsive media query for small screens */
 @media (max-width: 890px) {
   .checkbtn {
     display: block;
   }
-  .checkbtn-close {
-    display: block;
-  }
-  .logo img{
+  
+  .logo img {
     width: 60px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
-  ul {
+  nav ul {
     border-radius: 40px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     height: 100vh;
     background: #ffffff;
-    top: -5rem;
-    position: relative;
-    right: -100%;
-    transition: all .5s;
+    right: -100%; /* Start hidden off-screen */
+    transition: right 0.5s ease-in-out;
   }
 
   nav ul li {
     display: block;
-    margin: 50px;
+    margin: 50px auto; /* Center items */
     line-height: 30px;
-    position: relative;
+    text-align: center; /* Center text */
   }
 
   nav ul li a {
     font-size: 20px;
   }
 
-  a:hover,
-  a.active {
+  a.active,
+  a:hover {
     background: none;
     color: #0082e6;
   }
 
-  #check:checked~ul {
-    right: 0;
+  #check:checked ~ ul {
+    right: 0; /* Slide in the menu */
   }
 
-  hr{
+  hr {
     display: block;
     border: none; /* Remove default border */
     height: 1px; /* Set the height of the line */
@@ -149,27 +139,26 @@ hr{
     width: 70%; /* Set the width of the line */
     margin-left: auto;
     margin-right: auto;
-}
-.contact-us{
-  display: block;
-  text-align: center;
-  background-color: #0082e6;
-  width: 75%;
-  height: 50px;
-  border-radius: 25px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.contact-us a{
-  font-size: 25px;
-  color: white;
-  line-height: 50px;
-}
-.contact-us:hover{
-  background-color: #00a2ff;
-  transition: 0.5s;
-  transition: background-color 0.5s ease-in-out;
+  }
 
+  .contact-us {
+    display: block;
+    text-align: center;
+    background-color: #0082e6;
+    width: 75%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 20px auto; /* Center block */
+  }
 
+  .contact-us a {
+    font-size: 25px;
+    color: white;
+    line-height: 50px;
+  }
+
+  .contact-us:hover {
+    background-color: #00a2ff;
+    transition: background-color 0.5s ease-in-out;
+  }
 }
-
