@@ -1,47 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Responsive Navbar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome Link for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navixel Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/main.css">
+    <script>
+        // Function to detect the user's language and redirect
+        function detectLanguage() {
+            const userLang = navigator.language || navigator.userLanguage; // Get the user's language
+            const lang = userLang.toLowerCase().startsWith('ar') ? 'ar' : 'en'; // Check if it's Arabic
+            if (lang === 'ar') {
+                window.location.href = '/ar/index.html'; // Redirect to the Arabic version
+            } else {
+                window.location.href = '/en/index.html'; // Redirect to the English version
+            }
+        }
+        
+        // Run the language detection and redirection
+        window.onload = detectLanguage;
+    </script>
 </head>
-
 <body>
-  <nav>
-    <!-- Checkbox for toggling menu -->
-    <input type="checkbox" id="check">
 
-    <!-- Menu icon -->
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-
-    <!-- Site logo -->
-    <label class="logo"><img src="logo.png" alt="logo"></label>
-
-    <!-- Navigation links -->
-    <ul>
-        <label for="check" class="checkbtn-close">
-            <i class="fas fa-times"></i>
-          </label>
-      <li><a class="active" href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Feedback</a></li>
-      <hr>
-        <div class="contact-us">
-         <li><a href="#">Contact us</a></li>
-        </div>
-    </ul>
-  </nav>
-
-  <!-- Section for image -->
-  <section></section>
 </body>
-
 </html>
