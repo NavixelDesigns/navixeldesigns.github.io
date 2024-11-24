@@ -12,9 +12,9 @@
             const userLang = navigator.language || navigator.userLanguage; // Get the user's language
             const lang = userLang.toLowerCase().startsWith('ar') ? 'ar' : 'en'; // Check if it's Arabic
             if (lang === 'ar') {
-                window.location.href = '/ar/index.html'; // Redirect to the Arabic version
+                window.location.href = '/ar/'; // Redirect to the Arabic version
             } else {
-                window.location.href = '/en/index.html'; // Redirect to the English version
+                window.location.href = '/en/'; // Redirect to the English version
             }
         }
         
