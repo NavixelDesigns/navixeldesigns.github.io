@@ -274,7 +274,7 @@
             <img src="/ar/assets/form-banner.png" alt="banner">
         </div>
         <br>
-        <form id="designForm">
+        <form id="designForm"  action="https://formspree.io/f/xldenkqz" method="POST">
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" required>
 
@@ -338,11 +338,6 @@
             document.body.style.overflow = 'hidden'; // Disable body scroll
         }
 
-        // Handle form submission (just as an example)
-        document.getElementById("designForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("تم إرسال الطلب بنجاح!");
-        });
     </script>
 
 </body>
