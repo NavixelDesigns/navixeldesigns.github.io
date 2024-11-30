@@ -19,3 +19,9 @@ function toggleMenu() {
         body.style.paddingTop = '60px'; // Reset the padding when menu is closed
     }
 }
+
+
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('nav-open');
+}
