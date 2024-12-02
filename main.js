@@ -42,73 +42,82 @@ function openForm(designType) {
 
     // Show the modal and prevent scrolling on the body
     document.getElementById('order-form').classList.add('show');
+    
     document.body.classList.add('modal-open');  // Prevent body scrolling
+    document.body.style.overflow = 'hidden';    // Ensure background scrolling is disabled
 }
 
 // Function to close the form and allow body scrolling again
 function closeForm() {
     document.getElementById('order-form').classList.remove('show');
+    
     document.body.classList.remove('modal-open');  // Allow body scrolling again
+    document.body.style.overflow = '';             // Re-enable background scrolling
 }
 
+// For now, log to the console (you can replace this with an actual form submission)
+console.log(formData);
 
-    // For now, log to the console (you can replace this with an actual form submission)
-    console.log(formData);
-    
-    // Close the form after submission
-    closeForm();
-
+// Close the form after submission
+closeForm();
 
 // Function to redirect with category
 function redirectWithCategory(event, link) {
     // Prevent the default action of the link
     event.preventDefault();
-    
-    // Get the category from the data-category attribute
-    var category = link.getAttribute("data-category");
 
-    // Redirect to the work.html page with the category filter
-    window.location.href = "work.html?category=" + category;
+    // Get the category from the data-category attribute
+    const category = link.getAttribute("data-category");
+
+    // Ensure the category is not null or undefined
+    if (category) {
+        // Redirect to the work.html page with the category filter
+        window.location.href = `work.html?category=${category}`;
+    } else {
+        console.error("Category is not defined in the data-category attribute.");
+    }
 }
 
 // Function to extract category from URL
 function getCategoryFromURL() {
-    var urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('category');
 }
 
 // Function to filter work items based on category
 function filterWorkByCategory(category) {
-    var workItems = document.querySelectorAll('.work-card');
-    
-    workItems.forEach(function(workCard) {
-        if (workCard.getAttribute('data-category') === category || category === null) {
-            workCard.style.display = 'block';  // Show the work card
-        } else {
-            workCard.style.display = 'none';   // Hide the work card
-        }
-    });
-}
+    const workItems = document.querySelectorAll('.work-card');
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-// Function to set active class for the selected filter
-function setActiveCategory(category) {
-    var links = document.querySelectorAll('.project-link');
-    links.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-category') === category) {
-            link.classList.add('active');
-        }
-    });
-}
+    // Reset active state for all buttons
+    filterButtons.forEach((btn) => btn.classList.remove('active'));
 
-// Run when the page loads
-window.onload = function() {
-    var category = getCategoryFromURL();
-    if (category) {
-        filterWorkByCategory(category);  // Apply the filter based on the category in the URL
-        setActiveCategory(category);  // Set active class to the selected filter
+    // Set the active button based on the category
+    const activeButton = document.querySelector(`.filter-btn[data-category="${category}"]`);
+    if (activeButton) {
+        activeButton.classList.add('active');
+    } else {
+        // If category is missing or invalid, default to "all"
+        document.querySelector('.filter-btn[data-category="all"]').classList.add('active');
     }
-};
+
+    // Show/hide work items based on the category
+    workItems.forEach((item) => {
+        if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Apply the filter on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const category = getCategoryFromURL();
+    filterWorkByCategory(category || 'all');
+});
+
+// Modal scroll prevention
 document.body.addEventListener('modal-open', function() {
     document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
 });
