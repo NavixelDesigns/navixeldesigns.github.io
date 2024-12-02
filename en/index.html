@@ -37,25 +37,14 @@
     <title>Navixel Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="/main.css">
+    <script src="/main.js"></script>
+    <script src="/place-holders.js"></script>
     
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <a href="/en/index.html"><img src="/logo.png" alt="Navixel Logo"></a>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-    <nav id="nav-menu">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-         <!-- Language toggle buttons -->
-         <div class="language-toggle">
-            <a href="/en/">English</a> | <a href="/ar/">العربية</a>
-        </div>
-    </nav>
+   
 </header>
 
 <section class="hero-section">
@@ -63,17 +52,112 @@
     <p>Your trusted partner for modern, innovative design solutions. We transform ideas into stunning digital experiences.</p>
 </section>
 
-<div class="container">
+<section class="about">
+    <h2>About Navixel</h2>
+    <p>At Navixel, we believe in creating meaningful designs that communicate your brand's message effectively. Whether it's a logo, website, or brand identity, we bring your vision to life with creativity and precision.</p>
+    <p>Our team is dedicated to delivering high-quality designs that align with your goals, ensuring your brand stands out in a competitive market.</p>
+</section>
+<section class="services">
     <h2>Our Services</h2>
-    <p>At Navixel, we offer a wide range of design services including logo design, brand identity creation, web and mobile UI/UX design, and more.</p>
-</div>
+    <div class="service-items">
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        <div class="service-item">
+            <h3>Web Design</h3>
+            <p>Beautiful and responsive websites tailored to your needs.</p>
+        </div>
+        <div class="service-item">
+            <h3>UI/UX Design</h3>
+            <p>Optimized user interfaces for an enhanced user experience.</p>
+        </div>
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        <div class="service-item">
+            <h3>Logo Design</h3>
+            <p>Custom logos that represent your brand's identity.</p>
+        </div>
+        
+    </div>
+</section>
 
-<script>
-    function toggleMenu() {
-        const navMenu = document.getElementById('nav-menu');
-        navMenu.classList.toggle('nav-open');
-    }
-</script>
+<section class="portfolio">
+    <h2>Featured Work</h2>
+    <div class="portfolio-items">
+        <div class="portfolio-item">
+            <img src="/en/assets/banner-en.png" alt="Project 1">
+            <div class="portfolio-content">
+                <h3>Cyberpunk Dashboard</h3>
+                <p>An interactive web application with a futuristic design interface.</p>
+                <a href="work.html?category=ui-design" class="project-link"onclick="redirectWithCategory(event, this)" >View Project</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-item">
+            <img src="/en/assets/banner-en.png" alt="Project 2">
+            <div class="portfolio-content">
+                <h3>AI Visualization Tool</h3>
+                <p>Machine learning data visualization with real-time updates.</p>
+                <a href="#" class="project-link">Explore Details</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-item">
+            <img src="/en/assets/banner-en.png" alt="Project 3">
+            <div class="portfolio-content">
+                <h3>Smart Home Interface</h3>
+                <p>IoT platform connecting multiple smart home devices.</p>
+                <a href="#" class="project-link">See Project</a>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-item">
+            <img src="/en/assets/banner-en.png" alt="Project 4">
+            <div class="portfolio-content">
+                <h3>Blockchain Explorer</h3>
+                <p>Decentralized application for tracking cryptocurrency transactions.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+</section>
+<section class="cta-section">
+    <h2>Ready to Elevate Your Brand?</h2>
+    <p>Let’s work together to create designs that captivate and convert. Contact us today!</p>
+    <a href="#contact" class="cta-btn">Start Your Project</a>
+</section>
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? We'd love to hear from you! Fill out the form or reach out directly.</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    
+</footer>
 
 </body>
 </html>

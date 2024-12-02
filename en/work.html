@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/main.css">
+    <script src="/main.js"></script>
+    <script src="/place-holders.js"></script>
+</head>
+<header></header>
+<body>
+    <div id="work-page">
+       
+       <!-- Filter bar -->
+<div class="filter-bar">
+    <button class="filter-btn active" data-category="all" onclick="filterItems('all')">All</button>
+    <button class="filter-btn" data-category="web-design" onclick="filterItems('web-design')">Web Design</button>
+    <button class="filter-btn" data-category="ui-design" onclick="filterItems('ui-design')">UI Design</button>
+    <button class="filter-btn" data-category="logo-design" onclick="filterItems('logo-design')">Logo Design</button>
+    <button class="filter-btn" data-category="social-design" onclick="filterItems('social-design')">Social Media Design</button>
+    <button class="filter-btn" data-category="social-design" onclick="filterItems('social-design')">Social Media Design</button>
+</div>
+
+<!-- Work items (Cards) -->
+<div id="work-items" class="work-items">
+    <div class="work-card" data-category="web-design">
+        <img src="/en/assets/banner-en.png" alt="Web Design">
+        <div class="work-card-info">
+            <h3>Web Design 1 </h3>
+            <p>$500</p>
+            <button class="order-btn" onclick="openForm('web-design')">Order</button>
+        </div>
+    </div>
+    <div class="work-card" data-category="ui-design">
+        <img src="/en/assets/banner-en.png" alt="UI Design">
+        <div class="work-card-info">
+            <h3>UI Design</h3>
+            <p>$400</p>
+            <button class="order-btn" onclick="openForm('ui-design')">Order</button>
+        </div>
+    </div>
+    <div class="work-card" data-category="web-design">
+        <img src="/en/assets/banner-en.png" alt="Web Design">
+        <div class="work-card-info">
+            <h3>Web Design 2 </h3>
+            <p>$500</p>
+            <button class="order-btn" onclick="openForm('web-design')">Order</button>
+        </div>
+    </div>
+    <div class="work-card" data-category="web-design">
+        <img src="/en/assets/banner-en.png" alt="Web Design">
+        <div class="work-card-info">
+            <h3>Web Design 2 </h3>
+            <p>$500</p>
+            <button class="order-btn" onclick="openForm('web-design')">Order</button>
+        </div>
+    </div>
+    <div class="work-card" data-category="web-design">
+        <img src="/en/assets/banner-en.png" alt="Web Design">
+        <div class="work-card-info">
+            <h3>Web Design 2 </h3>
+            <p>$500</p>
+            <button class="order-btn" onclick="openForm('web-design')">Order</button>
+        </div>
+    </div>
+    <div class="work-card" data-category="web-design">
+        <img src="/en/assets/banner-en.png" alt="Web Design">
+        <div class="work-card-info">
+            <h3>Web Design 2 </h3>
+            <p>$500</p>
+            <button class="order-btn" onclick="openForm('web-design')">Order</button>
+        </div> 
+</div>
+
+    
+        <!-- Form Window -->
+        <div id="order-form" class="modal">
+            <div class="modal-content">
+                <form id="order-form-content">
+                    <h2>Design Order Form</h2>
+                    <p>Make Sure That You Agree On Our <a href="/en/legal/terms.html">Terms Of Use Policy</a></p>
+                    <label for="username">Full Name</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="design-type">Choose Your Design</label>
+                    <select id="design-type" name="design-type" required>
+                        <option value="">Select a Design</option>
+                        <option value="web-design">Web Design</option>
+                        <option value="ui-design">UI Design</option>
+                        <option value="logo-design">Logo Design</option>
+                        <option value="social-design">Social Media Design</option>
+                    </select>
+    
+                    <button type="submit">Send</button>
+                    <button type="button" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer></footer>
+    
+</body>
+</html>

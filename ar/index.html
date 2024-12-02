@@ -32,31 +32,23 @@
         <meta name="twitter:description" content="حوّل أفكارك إلى تجارب رقمية مذهلة مع تصاميم نافكسل. نقدم تصميم الشعارات، العلامة التجارية، والمزيد.">
         <meta name="twitter:image" content="https://navixeldesigns.github.io/ar/assets/banner-ar.png">
         <meta name="twitter:image:alt" content="شعار تصاميم نافكسل أو صورة تمثيلية للتصميم">
+
     
     <title>نافكسل للتصميم</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/rtl.css">
     <script src="/main.js"></script>
+    <script src="/place-holders.js"></script>
     
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <a href="/ar/index.html"><img src="/logo.png" alt="شعار نافكسل"></a>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-    <nav id="nav-menu">
-        <a href="#about">حول</a>
-        <a href="#services">الخدمات</a>
-        <a href="#portfolio">محفظة الأعمال</a>
-        <a href="#contact">اتصل بنا</a>
-         <!-- Language toggle buttons -->
-         <div class="language-toggle">
-            <a href="/en/">English</a> | <a href="/ar/">العربية</a>
-        </div>
-    </nav>
+   <!-- Language toggle buttons -->
+   <div class="language-toggle">
+    <a href="/en/">English</a> | <a href="/ar/">العربية</a>
+</div>
 </header>
 <section class="announcement-bar">
     <p>🎉 احصل على تصميم جرافيكي مجاني! 5 فائزين عشوائيين سيفوزون بتصميمات مخصصة، قم بملء النموذج الآن للمشاركة! 🎨 <a href="/ar/form.html">شارك الآن</a></p>
@@ -69,17 +61,75 @@
     <p>شريككم الموثوق للحلول التصميمية الحديثة والمبتكرة. نحن نحول الأفكار إلى تجارب رقمية مذهلة.</p>
 </section>
 
-<div class="container">
-    <h2>خدماتنا</h2>
-    <p>في نافكسل، نقدم مجموعة واسعة من خدمات التصميم بما في ذلك تصميم الشعارات، إنشاء هوية العلامة التجارية، تصميم واجهات المستخدم والموبايل، والمزيد.</p>
-</div>
+<section class="about">
+    <h2>عن نافيكسل</h2>
+    <p>في نافيكسل، نؤمن بإنشاء تصاميم هادفة تعبر عن رسالة علامتك التجارية بفعالية. سواء كانت شعاراً أو موقعاً إلكترونياً أو هوية بصرية، نحن نجعل رؤيتك حقيقة بإبداع ودقة.</p>
+    <p>فريقنا ملتزم بتقديم تصاميم عالية الجودة تتماشى مع أهدافكم، لضمان تميز علامتكم في سوق تنافسي.</p>
+</section>
 
-<script>
-    function toggleMenu() {
-        const navMenu = document.getElementById('nav-menu');
-        navMenu.classList.toggle('nav-open');
-    }
-</script>
+<section class="services">
+    <h2>خدماتنا</h2>
+    <div class="service-items">
+        <div class="service-item">
+            <h3>تصميم الشعارات</h3>
+            <p>شعارات مخصصة تعكس هوية علامتكم.</p>
+        </div>
+        <div class="service-item">
+            <h3>تصميم المواقع</h3>
+            <p>مواقع جذابة ومتجاوبة تناسب احتياجاتكم.</p>
+        </div>
+        <div class="service-item">
+            <h3>تصميم واجهات المستخدم</h3>
+            <p>واجهات مستخدم محسنة لتجربة استخدام أفضل.</p>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio">
+    <h2>أعمال مميزة</h2>
+    <div class="portfolio-items">
+        <div class="portfolio-item">
+            <img src="/ar/assets/banner-ar.png" alt="مشروع 1">
+            <div class="portfolio-content">
+                <h3>لوحة معلومات سايبربانك</h3>
+                <p>تطبيق ويب تفاعلي بواجهة تصميم مستقبلية.</p>
+                <a href="work.html?category=ui-design" class="project-link" onclick="redirectWithCategory(event, this)">عرض المشروع</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-item">
+            <img src="/ar/assets/banner-ar.png" alt="مشروع 2">
+            <div class="portfolio-content">
+                <h3>أداة تصور الذكاء الاصطناعي</h3>
+                <p>تصور بيانات التعلم الآلي بتحديثات في الوقت الفعلي.</p>
+                <a href="#" class="project-link">استكشاف التفاصيل</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>هل أنت مستعد للارتقاء بعلامتك التجارية؟</h2>
+    <p>دعنا نعمل معاً لابتكار تصاميم تجذب وتحول العملاء. تواصل معنا اليوم!</p>
+    <a href="#contact" class="cta-btn">ابدأ مشروعك</a>
+</section>
+
+<section id="contact" class="contact">
+    <h2>تواصل معنا</h2>
+    <p>هل لديك مشروع في بالك؟ يسعدنا سماع أفكارك! املأ النموذج أو تواصل معنا مباشرة.</p>
+    <form>
+        <input type="text" placeholder="اسمك" required>
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال الرسالة</button>
+    </form>
+</section>
+<!-- Footer -->
+    <footer class="footer">
+        
+    </footer>
+    
 
 </body>
 </html>
